@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Morales · Desarrollador Fullstack</title>
+  <meta name="description" content="Portafolio profesional de Alex Morales, desarrollador fullstack (perfil de ejemplo).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- HU05 · Navegación -->
+  <nav class="nav" aria-label="Navegación principal">
+    <div class="contenedor nav__contenido">
+      <a class="nav__marca" href="#inicio">&lt;AM /&gt;</a>
+      <button class="nav__boton" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HU01 · Encabezado: nombre, descripción profesional y avatar -->
+  <header class="hero" id="inicio">
+    <div class="contenedor hero__contenido">
+      <img class="hero__avatar" src="img/alex.jpg" alt="Foto de Alex Morales" width="160" height="160">
+      <div>
+        <p class="hero__saludo">Hola, soy</p>
+        <h1 class="hero__nombre">Alex Morales</h1>
+        <p class="hero__rol">Desarrollador Fullstack · JavaScript · Python · AWS</p>
+        <p class="hero__descripcion">
+          Construyo aplicaciones web de punta a punta: interfaces rápidas con React, APIs REST con
+          Node.js y Django, bases de datos SQL y NoSQL, y despliegues en la nube con AWS y Docker.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HU02 · Perfil profesional -->
+    <section class="seccion" id="sobre-mi">
+      <div class="contenedor">
+        <h2 class="seccion__titulo">Sobre mí</h2>
+        <p class="sobre-mi__resumen">
+          Soy ingeniero de sistemas con cuatro años de experiencia desarrollando productos web. Me gusta trabajar
+          en todo el ciclo: desde el diseño de la base de datos y la API hasta la interfaz y el despliegue.
+          Trabajo con metodologías ágiles, escribo pruebas para el código que entrego y cuido el rendimiento
+          y la accesibilidad de lo que construyo.
+        </p>
+
+        <div class="sobre-mi__columnas">
+          <div>
+            <h3 class="sobre-mi__subtitulo">Formación académica</h3>
+            <ol class="linea-tiempo">
+              <li class="linea-tiempo__item">
+                <span class="linea-tiempo__fecha">2017 – 2021</span>
+                <h4>Ingeniería de Sistemas</h4>
+                <p>Universidad (ejemplo) · Pregrado</p>
+              </li>
+              <li class="linea-tiempo__item">
+                <span class="linea-tiempo__fecha">2022</span>
+                <h4>AWS Certified Cloud Practitioner</h4>
+                <p>Certificación en fundamentos de servicios en la nube</p>
+              </li>
+              <li class="linea-tiempo__item">
+                <span class="linea-tiempo__fecha">2023</span>
+                <h4>Diplomado en Arquitectura de Software</h4>
+                <p>Microservicios, patrones de diseño y APIs REST</p>
+              </li>
+            </ol>
+          </div>
+
+          <div>
+            <h3 class="sobre-mi__subtitulo">Experiencia profesional</h3>
+            <ol class="linea-tiempo">
+              <li class="linea-tiempo__item">
+                <span class="linea-tiempo__fecha">2023 – Actual</span>
+                <h4>Desarrollador Fullstack · Empresa de software</h4>
+                <p>Desarrollo de una plataforma de comercio electrónico con React, Node.js y PostgreSQL desplegada en AWS.</p>
+              </li>
+              <li class="linea-tiempo__item">
+                <span class="linea-tiempo__fecha">2021 – 2023</span>
+                <h4>Desarrollador Backend · Agencia digital</h4>
+                <p>APIs REST con Django y Express, integración de pasarelas de pago y automatización de despliegues con Docker.</p>
+              </li>
+              <li class="linea-tiempo__item">
+                <span class="linea-tiempo__fecha">2020 – 2021</span>
+                <h4>Practicante de desarrollo web</h4>
+                <p>Maquetación de sitios en HTML, CSS y JavaScript y mantenimiento de bases de datos MySQL.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HU03 · Habilidades técnicas -->
+    <section class="seccion seccion--alterna" id="habilidades">
+      <div class="contenedor">
+        <h2 class="seccion__titulo">Habilidades técnicas</h2>
+
+        <h3 class="categoria">Lenguajes</h3>
+        <ul class="tarjetas">
+          <li class="tarjeta"><img src="img/icons/javascript.svg" alt="" width="40" height="40"><span>JavaScript</span></li>
+          <li class="tarjeta"><img src="img/icons/typescript.svg" alt="" width="40" height="40"><span>TypeScript</span></li>
+          <li class="tarjeta"><img src="img/icons/python.svg" alt="" width="40" height="40"><span>Python</span></li>
+          <li class="tarjeta"><img src="img/icons/java.svg" alt="" width="40" height="40"><span>Java</span></li>
+          <li class="tarjeta"><img src="img/icons/html5.svg" alt="" width="40" height="40"><span>HTML</span></li>
+          <li class="tarjeta"><img src="img/icons/css3.svg" alt="" width="40" height="40"><span>CSS</span></li>
+        </ul>
+
+        <h3 class="categoria">Frontend</h3>
+        <ul class="tarjetas">
+          <li class="tarjeta"><img src="img/icons/react.svg" alt="" width="40" height="40"><span>React</span></li>
+          <li class="tarjeta"><img src="img/icons/nextjs.svg" alt="" width="40" height="40"><span>Next.js</span></li>
+        </ul>
+
+        <h3 class="categoria">Backend</h3>
+        <ul class="tarjetas">
+          <li class="tarjeta"><img src="img/icons/nodejs.svg" alt="" width="40" height="40"><span>Node.js</span></li>
+          <li class="tarjeta"><img src="img/icons/express.svg" alt="" width="40" height="40"><span>Express</span></li>
+          <li class="tarjeta"><img src="img/icons/django.svg" alt="" width="40" height="40"><span>Django</span></li>
+          <li class="tarjeta"><img src="img/icons/spring.svg" alt="" width="40" height="40"><span>Spring Boot</span></li>
+        </ul>
+
+        <h3 class="categoria">Bases de datos</h3>
+        <ul class="tarjetas">
+          <li class="tarjeta"><img src="img/icons/postgresql.svg" alt="" width="40" height="40"><span>PostgreSQL</span></li>
+          <li class="tarjeta"><img src="img/icons/mysql.svg" alt="" width="40" height="40"><span>MySQL</span></li>
+          <li class="tarjeta"><img src="img/icons/mongodb.svg" alt="" width="40" height="40"><span>MongoDB</span></li>
+          <li class="tarjeta"><img src="img/icons/redis.svg" alt="" width="40" height="40"><span>Redis</span></li>
+        </ul>
+
+        <h3 class="categoria">Herramientas y nube</h3>
+        <ul class="tarjetas">
+          <li class="tarjeta"><img src="img/icons/git.svg" alt="" width="40" height="40"><span>Git</span></li>
+          <li class="tarjeta"><img src="img/icons/docker.svg" alt="" width="40" height="40"><span>Docker</span></li>
+          <li class="tarjeta"><img src="img/icons/githubactions.svg" alt="" width="40" height="40"><span>GitHub Actions</span></li>
+          <li class="tarjeta"><img src="img/icons/postman.svg" alt="" width="40" height="40"><span>Postman</span></li>
+          <li class="tarjeta"><img src="img/icons/amazonwebservices.svg" alt="" width="40" height="40"><span>AWS</span></li>
+        </ul>
+      </div>
+    </section>
+    <!-- Fotos de proyectos: Unsplash (licencia Unsplash). Tienda: Shutter Speed · Tareas: Paymo
+         API: Rahul Mishra · Clima: Kevin Rajaram. Optimizadas a 800x500 px. -->
+    <!-- HU04 · Portafolio de proyectos -->
+    <section class="seccion" id="proyectos">
+      <div class="contenedor">
+        <h2 class="seccion__titulo">Proyectos</h2>
+        <p class="seccion__intro">Una selección de proyectos personales y profesionales, con su descripción, tecnologías y enlaces.</p>
+        <div class="proyectos">
+          <article class="proyecto">
+            <img class="proyecto__imagen" src="img/proyectos/tienda.jpg" alt="Vista previa de Tienda en línea" width="320" height="200" loading="lazy">
+            <div class="proyecto__cuerpo">
+              <h3 class="proyecto__titulo">Tienda en línea</h3>
+              <p class="proyecto__descripcion">Comercio electrónico con catálogo, carrito, pagos y panel de administración de pedidos.</p>
+              <ul class="proyecto__tecnologias"><li>React</li><li>Node.js</li><li>PostgreSQL</li><li>AWS</li></ul>
+              <div class="proyecto__enlaces">
+                <a class="boton boton--primario" href="https://tienda.alexmorales.dev" target="_blank" rel="noopener">Ver demo</a>
+                <a class="boton boton--secundario" href="https://github.com/alexmorales-dev/tienda-en-linea" target="_blank" rel="noopener">Código</a>
+              </div>
+            </div>
+          </article>
+          <article class="proyecto">
+            <img class="proyecto__imagen" src="img/proyectos/tareas.jpg" alt="Vista previa de Gestor de tareas" width="320" height="200" loading="lazy">
+            <div class="proyecto__cuerpo">
+              <h3 class="proyecto__titulo">Gestor de tareas</h3>
+              <p class="proyecto__descripcion">Tablero kanban colaborativo con autenticación, etiquetas y actualizaciones en tiempo real.</p>
+              <ul class="proyecto__tecnologias"><li>Next.js</li><li>TypeScript</li><li>MongoDB</li></ul>
+              <div class="proyecto__enlaces">
+                <a class="boton boton--primario" href="https://tareas.alexmorales.dev" target="_blank" rel="noopener">Ver demo</a>
+                <a class="boton boton--secundario" href="https://github.com/alexmorales-dev/gestor-tareas" target="_blank" rel="noopener">Código</a>
+              </div>
+            </div>
+          </article>
+          <article class="proyecto">
+            <img class="proyecto__imagen" src="img/proyectos/api.jpg" alt="Vista previa de API de reservas" width="320" height="200" loading="lazy">
+            <div class="proyecto__cuerpo">
+              <h3 class="proyecto__titulo">API de reservas</h3>
+              <p class="proyecto__descripcion">API REST para reservas de citas con autenticación JWT, documentación OpenAPI y pruebas automatizadas.</p>
+              <ul class="proyecto__tecnologias"><li>Django</li><li>PostgreSQL</li><li>Docker</li></ul>
+              <div class="proyecto__enlaces">
+                <a class="boton boton--primario" href="https://api.alexmorales.dev/docs" target="_blank" rel="noopener">Ver demo</a>
+                <a class="boton boton--secundario" href="https://github.com/alexmorales-dev/api-reservas" target="_blank" rel="noopener">Código</a>
+              </div>
+            </div>
+          </article>
+          <article class="proyecto">
+            <img class="proyecto__imagen" src="img/proyectos/clima.jpg" alt="Vista previa de Panel del clima" width="320" height="200" loading="lazy">
+            <div class="proyecto__cuerpo">
+              <h3 class="proyecto__titulo">Panel del clima</h3>
+              <p class="proyecto__descripcion">Aplicación que consume una API pública y muestra pronósticos con gráficos y búsqueda por ciudad.</p>
+              <ul class="proyecto__tecnologias"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+              <div class="proyecto__enlaces">
+                <a class="boton boton--primario" href="https://clima.alexmorales.dev" target="_blank" rel="noopener">Ver demo</a>
+                <a class="boton boton--secundario" href="https://github.com/alexmorales-dev/panel-clima" target="_blank" rel="noopener">Código</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>© 2026 Alex Morales · Portafolio fullstack · Versión Sprint 2</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
