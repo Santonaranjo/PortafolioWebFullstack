@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <title>API de reservas · Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/demos.css">
+</head>
+<body>
+  <header class="barra">
+    <div class="contenedor">
+      <strong>API de reservas</strong>
+      <a href="../index.html#proyectos">← Volver al portafolio</a>
+    </div>
+  </header>
+  <main class="contenedor">
+    <span class="etiqueta">Demo</span>
+    <h1>Documentación de la API</h1>
+    <div class="rejilla">
+      <div class="tarjeta"><h3>GET /reservas</h3><p>Lista las reservas.</p></div>
+      <div class="tarjeta"><h3>POST /reservas</h3><p>Crea una reserva.</p></div>
+      <div class="tarjeta"><h3>DELETE /reservas/:id</h3><p>Cancela una reserva.</p></div>
+    </div>
+    <p style="margin-top:20px;"><button class="boton" id="probar">Probar GET /reservas</button></p>
+    <pre id="respuesta" style="margin-top:16px;">// La respuesta aparecerá aquí</pre>
+  </main>
+  <script>
+    const reservas = [
+      { id: 1, cliente: 'Laura Gómez', fecha: '2026-11-20', hora: '10:00' },
+      { id: 2, cliente: 'Carlos Ruiz', fecha: '2026-11-21', hora: '15:30' },
+    ];
+    document.getElementById('probar').addEventListener('click', () => {
+      document.getElementById('respuesta').textContent = JSON.stringify(reservas, null, 2);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <title>Tienda en línea · Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/demos.css">
+</head>
+<body>
+  <header class="barra">
+    <div class="contenedor">
+      <strong>Tienda en línea</strong>
+      <a href="../index.html#proyectos">← Volver al portafolio</a>
+    </div>
+  </header>
+  <main class="contenedor">
+    <span class="etiqueta">Demo</span>
+    <h1>Catálogo</h1>
+    <p class="nota">Carrito: <strong id="carrito">0</strong> productos · Total: <strong id="total">$0</strong></p>
+    <div class="rejilla">
+      <div class="tarjeta"><h3>Audífonos</h3><p>$120.000</p><button class="boton" data-precio="120000">Agregar</button></div>
+      <div class="tarjeta"><h3>Teclado</h3><p>$180.000</p><button class="boton" data-precio="180000">Agregar</button></div>
+      <div class="tarjeta"><h3>Mouse</h3><p>$70.000</p><button class="boton" data-precio="70000">Agregar</button></div>
+    </div>
+  </main>
+  <script>
+    let cantidad = 0, total = 0;
+    document.querySelectorAll('[data-precio]').forEach((boton) => {
+      boton.addEventListener('click', () => {
+        cantidad++;
+        total += Number(boton.dataset.precio);
+        document.getElementById('carrito').textContent = cantidad;
+        document.getElementById('total').textContent = '$' + total.toLocaleString('es-CO');
+      });
+    });
+  </script>
+</body>
+</html>

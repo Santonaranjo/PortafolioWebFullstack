@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <title>API de reservas · Código</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/demos.css">
+</head>
+<body>
+  <header class="barra">
+    <div class="contenedor">
+      <strong>API de reservas · Código fuente</strong>
+      <a href="../index.html#proyectos">← Volver al portafolio</a>
+    </div>
+  </header>
+  <main class="contenedor">
+    <span class="etiqueta">demos/api.html</span>
+    <h1>Código de la demo</h1>
+    <p class="nota">Este es el código completo de la <a href="../demos/api.html">página de demostración</a>.</p>
+    <pre style="margin-top:16px;"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;es&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;link rel=&quot;icon&quot; type=&quot;image/svg+xml&quot; href=&quot;../img/favicon.svg&quot;&gt;
+  &lt;title&gt;API de reservas · Demo&lt;/title&gt;
+  &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=JetBrains+Mono&amp;family=Poppins:wght@600&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;../css/demos.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header class=&quot;barra&quot;&gt;
+    &lt;div class=&quot;contenedor&quot;&gt;
+      &lt;strong&gt;API de reservas&lt;/strong&gt;
+      &lt;a href=&quot;../index.html#proyectos&quot;&gt;← Volver al portafolio&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+  &lt;main class=&quot;contenedor&quot;&gt;
+    &lt;span class=&quot;etiqueta&quot;&gt;Demo&lt;/span&gt;
+    &lt;h1&gt;Documentación de la API&lt;/h1&gt;
+    &lt;div class=&quot;rejilla&quot;&gt;
+      &lt;div class=&quot;tarjeta&quot;&gt;&lt;h3&gt;GET /reservas&lt;/h3&gt;&lt;p&gt;Lista las reservas.&lt;/p&gt;&lt;/div&gt;
+      &lt;div class=&quot;tarjeta&quot;&gt;&lt;h3&gt;POST /reservas&lt;/h3&gt;&lt;p&gt;Crea una reserva.&lt;/p&gt;&lt;/div&gt;
+      &lt;div class=&quot;tarjeta&quot;&gt;&lt;h3&gt;DELETE /reservas/:id&lt;/h3&gt;&lt;p&gt;Cancela una reserva.&lt;/p&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p style=&quot;margin-top:20px;&quot;&gt;&lt;button class=&quot;boton&quot; id=&quot;probar&quot;&gt;Probar GET /reservas&lt;/button&gt;&lt;/p&gt;
+    &lt;pre id=&quot;respuesta&quot; style=&quot;margin-top:16px;&quot;&gt;// La respuesta aparecerá aquí&lt;/pre&gt;
+  &lt;/main&gt;
+  &lt;script&gt;
+    const reservas = [
+      { id: 1, cliente: &#x27;Laura Gómez&#x27;, fecha: &#x27;2026-11-20&#x27;, hora: &#x27;10:00&#x27; },
+      { id: 2, cliente: &#x27;Carlos Ruiz&#x27;, fecha: &#x27;2026-11-21&#x27;, hora: &#x27;15:30&#x27; },
+    ];
+    document.getElementById(&#x27;probar&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+      document.getElementById(&#x27;respuesta&#x27;).textContent = JSON.stringify(reservas, null, 2);
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+  </main>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <title>Panel del clima · Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/demos.css">
+</head>
+<body>
+  <header class="barra">
+    <div class="contenedor">
+      <strong>Panel del clima</strong>
+      <a href="../index.html#proyectos">← Volver al portafolio</a>
+    </div>
+  </header>
+  <main class="contenedor">
+    <span class="etiqueta">Demo</span>
+    <h1>Clima por ciudad</h1>
+    <p style="margin-top:16px;">
+      <select id="ciudad">
+        <option value="manizales">Manizales</option>
+        <option value="bogota">Bogotá</option>
+        <option value="medellin">Medellín</option>
+      </select>
+    </p>
+    <div class="tarjeta" style="margin-top:16px; max-width:320px;">
+      <h2 id="temperatura">17 °C</h2>
+      <p id="estado">Nublado</p>
+    </div>
+    <p class="nota">Datos de ejemplo.</p>
+  </main>
+  <script>
+    const datos = {
+      manizales: { temperatura: '17 °C', estado: 'Nublado' },
+      bogota: { temperatura: '14 °C', estado: 'Lluvia ligera' },
+      medellin: { temperatura: '24 °C', estado: 'Soleado' },
+    };
+    document.getElementById('ciudad').addEventListener('change', (evento) => {
+      const clima = datos[evento.target.value];
+      document.getElementById('temperatura').textContent = clima.temperatura;
+      document.getElementById('estado').textContent = clima.estado;
+    });
+  </script>
+</body>
+</html>

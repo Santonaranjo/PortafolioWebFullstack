@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <title>Gestor de tareas · Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/demos.css">
+</head>
+<body>
+  <header class="barra">
+    <div class="contenedor">
+      <strong>Gestor de tareas</strong>
+      <a href="../index.html#proyectos">← Volver al portafolio</a>
+    </div>
+  </header>
+  <main class="contenedor">
+    <span class="etiqueta">Demo</span>
+    <h1>Tablero de tareas</h1>
+    <form id="formulario" style="margin-top:16px; display:flex; gap:8px; flex-wrap:wrap;">
+      <input id="nueva" placeholder="Nueva tarea" required>
+      <button class="boton">Agregar</button>
+    </form>
+    <div class="rejilla">
+      <div class="tarjeta"><h3>Por hacer</h3><ul id="por-hacer"><li>Diseñar inicio de sesión</li></ul></div>
+      <div class="tarjeta"><h3>En curso</h3><ul><li>Crear API de tareas</li></ul></div>
+      <div class="tarjeta"><h3>Hecho</h3><ul><li>Configurar repositorio</li></ul></div>
+    </div>
+  </main>
+  <script>
+    document.getElementById('formulario').addEventListener('submit', (evento) => {
+      evento.preventDefault();
+      const campo = document.getElementById('nueva');
+      const item = document.createElement('li');
+      item.textContent = campo.value;
+      document.getElementById('por-hacer').appendChild(item);
+      campo.value = '';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+/* Estilos compartidos de las demos y páginas de código */
+:root {
+  --primario: #1F3864; --acento: #00B4D8; --fondo: #F8F9FA; --superficie: #FFFFFF;
+  --texto: #212529; --texto-secundario: #6C757D; --borde: #E3E7EC; --radio: 12px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Inter", system-ui, sans-serif; background: var(--fondo); color: var(--texto); line-height: 1.6; }
+h1, h2, h3 { font-family: "Poppins", system-ui, sans-serif; line-height: 1.2; }
+.barra { background: var(--primario); color: #FFFFFF; padding: 16px 0; }
+.barra .contenedor { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.barra a { color: var(--acento); text-decoration: none; font-weight: 500; }
+.contenedor { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+main.contenedor { padding: 32px 20px 48px; }
+.nota a { color: var(--primario); font-weight: 500; }
+.etiqueta { display: inline-block; font-size: 0.75rem; background: rgba(0, 180, 216, 0.15); color: var(--primario); padding: 2px 10px; border-radius: 999px; margin-bottom: 8px; }
+.tarjeta { background: var(--superficie); border: 1px solid var(--borde); border-radius: var(--radio); padding: 20px; }
+.rejilla { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 20px; }
+.boton { background: var(--primario); color: #FFFFFF; border: 0; border-radius: 8px; padding: 8px 16px; font: inherit; cursor: pointer; }
+.boton:hover { background: var(--acento); }
+input, select { font: inherit; padding: 8px 12px; border: 1px solid var(--borde); border-radius: 8px; }
+.nota { color: var(--texto-secundario); font-size: 0.9rem; margin-top: 8px; }
+pre { background: #0F1B2D; color: #E6EDF3; padding: 20px; border-radius: var(--radio); overflow-x: auto; font-family: "JetBrains Mono", Consolas, monospace; font-size: 0.85rem; line-height: 1.5; }

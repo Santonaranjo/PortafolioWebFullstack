@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <title>Panel del clima · Código</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/demos.css">
+</head>
+<body>
+  <header class="barra">
+    <div class="contenedor">
+      <strong>Panel del clima · Código fuente</strong>
+      <a href="../index.html#proyectos">← Volver al portafolio</a>
+    </div>
+  </header>
+  <main class="contenedor">
+    <span class="etiqueta">demos/clima.html</span>
+    <h1>Código de la demo</h1>
+    <p class="nota">Este es el código completo de la <a href="../demos/clima.html">página de demostración</a>.</p>
+    <pre style="margin-top:16px;"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;es&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;link rel=&quot;icon&quot; type=&quot;image/svg+xml&quot; href=&quot;../img/favicon.svg&quot;&gt;
+  &lt;title&gt;Panel del clima · Demo&lt;/title&gt;
+  &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=JetBrains+Mono&amp;family=Poppins:wght@600&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;../css/demos.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header class=&quot;barra&quot;&gt;
+    &lt;div class=&quot;contenedor&quot;&gt;
+      &lt;strong&gt;Panel del clima&lt;/strong&gt;
+      &lt;a href=&quot;../index.html#proyectos&quot;&gt;← Volver al portafolio&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+  &lt;main class=&quot;contenedor&quot;&gt;
+    &lt;span class=&quot;etiqueta&quot;&gt;Demo&lt;/span&gt;
+    &lt;h1&gt;Clima por ciudad&lt;/h1&gt;
+    &lt;p style=&quot;margin-top:16px;&quot;&gt;
+      &lt;select id=&quot;ciudad&quot;&gt;
+        &lt;option value=&quot;manizales&quot;&gt;Manizales&lt;/option&gt;
+        &lt;option value=&quot;bogota&quot;&gt;Bogotá&lt;/option&gt;
+        &lt;option value=&quot;medellin&quot;&gt;Medellín&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/p&gt;
+    &lt;div class=&quot;tarjeta&quot; style=&quot;margin-top:16px; max-width:320px;&quot;&gt;
+      &lt;h2 id=&quot;temperatura&quot;&gt;17 °C&lt;/h2&gt;
+      &lt;p id=&quot;estado&quot;&gt;Nublado&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;nota&quot;&gt;Datos de ejemplo.&lt;/p&gt;
+  &lt;/main&gt;
+  &lt;script&gt;
+    const datos = {
+      manizales: { temperatura: &#x27;17 °C&#x27;, estado: &#x27;Nublado&#x27; },
+      bogota: { temperatura: &#x27;14 °C&#x27;, estado: &#x27;Lluvia ligera&#x27; },
+      medellin: { temperatura: &#x27;24 °C&#x27;, estado: &#x27;Soleado&#x27; },
+    };
+    document.getElementById(&#x27;ciudad&#x27;).addEventListener(&#x27;change&#x27;, (evento) =&gt; {
+      const clima = datos[evento.target.value];
+      document.getElementById(&#x27;temperatura&#x27;).textContent = clima.temperatura;
+      document.getElementById(&#x27;estado&#x27;).textContent = clima.estado;
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+  </main>
+</body>
+</html>

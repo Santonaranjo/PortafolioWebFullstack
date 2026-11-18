@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <title>Tienda en línea · Código</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/demos.css">
+</head>
+<body>
+  <header class="barra">
+    <div class="contenedor">
+      <strong>Tienda en línea · Código fuente</strong>
+      <a href="../index.html#proyectos">← Volver al portafolio</a>
+    </div>
+  </header>
+  <main class="contenedor">
+    <span class="etiqueta">demos/tienda.html</span>
+    <h1>Código de la demo</h1>
+    <p class="nota">Este es el código completo de la <a href="../demos/tienda.html">página de demostración</a>.</p>
+    <pre style="margin-top:16px;"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;es&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;link rel=&quot;icon&quot; type=&quot;image/svg+xml&quot; href=&quot;../img/favicon.svg&quot;&gt;
+  &lt;title&gt;Tienda en línea · Demo&lt;/title&gt;
+  &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=JetBrains+Mono&amp;family=Poppins:wght@600&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;../css/demos.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header class=&quot;barra&quot;&gt;
+    &lt;div class=&quot;contenedor&quot;&gt;
+      &lt;strong&gt;Tienda en línea&lt;/strong&gt;
+      &lt;a href=&quot;../index.html#proyectos&quot;&gt;← Volver al portafolio&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+  &lt;main class=&quot;contenedor&quot;&gt;
+    &lt;span class=&quot;etiqueta&quot;&gt;Demo&lt;/span&gt;
+    &lt;h1&gt;Catálogo&lt;/h1&gt;
+    &lt;p class=&quot;nota&quot;&gt;Carrito: &lt;strong id=&quot;carrito&quot;&gt;0&lt;/strong&gt; productos · Total: &lt;strong id=&quot;total&quot;&gt;$0&lt;/strong&gt;&lt;/p&gt;
+    &lt;div class=&quot;rejilla&quot;&gt;
+      &lt;div class=&quot;tarjeta&quot;&gt;&lt;h3&gt;Audífonos&lt;/h3&gt;&lt;p&gt;$120.000&lt;/p&gt;&lt;button class=&quot;boton&quot; data-precio=&quot;120000&quot;&gt;Agregar&lt;/button&gt;&lt;/div&gt;
+      &lt;div class=&quot;tarjeta&quot;&gt;&lt;h3&gt;Teclado&lt;/h3&gt;&lt;p&gt;$180.000&lt;/p&gt;&lt;button class=&quot;boton&quot; data-precio=&quot;180000&quot;&gt;Agregar&lt;/button&gt;&lt;/div&gt;
+      &lt;div class=&quot;tarjeta&quot;&gt;&lt;h3&gt;Mouse&lt;/h3&gt;&lt;p&gt;$70.000&lt;/p&gt;&lt;button class=&quot;boton&quot; data-precio=&quot;70000&quot;&gt;Agregar&lt;/button&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+  &lt;script&gt;
+    let cantidad = 0, total = 0;
+    document.querySelectorAll(&#x27;[data-precio]&#x27;).forEach((boton) =&gt; {
+      boton.addEventListener(&#x27;click&#x27;, () =&gt; {
+        cantidad++;
+        total += Number(boton.dataset.precio);
+        document.getElementById(&#x27;carrito&#x27;).textContent = cantidad;
+        document.getElementById(&#x27;total&#x27;).textContent = &#x27;$&#x27; + total.toLocaleString(&#x27;es-CO&#x27;);
+      });
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+  </main>
+</body>
+</html>
