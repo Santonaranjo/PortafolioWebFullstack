@@ -15,3 +15,4 @@ menu.querySelectorAll('a').forEach((enlace) => {
     boton.setAttribute('aria-label', 'Abrir menú');
   });
 });
+// Mantiene accesible el estado del menú móvil.
